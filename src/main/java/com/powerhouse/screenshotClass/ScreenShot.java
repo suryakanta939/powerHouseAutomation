@@ -23,6 +23,7 @@ public class ScreenShot {
 		File dstFile=new File(fs.getAbsolutePath()+"\\"+fileName+".png");
 		FileUtils.copyFile(srcFile, dstFile);
 		String imagePath=fs.getAbsolutePath()+"\\"+fileName+".png";
+		System.out.println(imagePath);
 		return imagePath;
 	}
 

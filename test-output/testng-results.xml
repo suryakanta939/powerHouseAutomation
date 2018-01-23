@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="29830" started-at="2018-01-22T11:20:12Z" finished-at="2018-01-22T11:20:42Z">
+  <suite name="Default suite" duration-ms="39630" started-at="2018-01-23T08:52:32Z" finished-at="2018-01-23T08:53:12Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="29830" started-at="2018-01-22T11:20:12Z" finished-at="2018-01-22T11:20:42Z">
-      <class name="com.powerhouse.testCase.Checking">
-        <test-method status="PASS" signature="f()[pri:0, instance:com.powerhouse.testCase.Checking@28d25987]" name="f" duration-ms="29765" started-at="2018-01-22T16:50:12Z" finished-at="2018-01-22T16:50:42Z">
+    <test name="Default test" duration-ms="39630" started-at="2018-01-23T08:52:32Z" finished-at="2018-01-23T08:53:12Z">
+      <class name="com.powerhouse.loginLogOutTest.LoginAndLogOut">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.powerhouse.loginLogOutTest.LoginAndLogOut@66a3ffec]" name="setUp" is-config="true" duration-ms="9891" started-at="2018-01-23T14:22:32Z" finished-at="2018-01-23T14:22:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-      </class> <!-- com.powerhouse.testCase.Checking -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="logInWithFaceBook()[pri:0, instance:com.powerhouse.loginLogOutTest.LoginAndLogOut@66a3ffec]" name="logInWithFaceBook" duration-ms="9243" started-at="2018-01-23T14:22:42Z" finished-at="2018-01-23T14:22:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInWithFaceBook -->
+        <test-method status="PASS" signature="exeCutingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.powerhouse.loginLogOutTest.LoginAndLogOut@66a3ffec]" name="exeCutingAfterMethod" is-config="true" duration-ms="4983" started-at="2018-01-23T14:22:51Z" finished-at="2018-01-23T14:22:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logInWithFaceBook status=SUCCESS method=LoginAndLogOut.logInWithFaceBook()[pri:0, instance:com.powerhouse.loginLogOutTest.LoginAndLogOut@66a3ffec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exeCutingAfterMethod -->
+        <test-method status="PASS" signature="logInWithGoogle()[pri:0, instance:com.powerhouse.loginLogOutTest.LoginAndLogOut@66a3ffec]" name="logInWithGoogle" duration-ms="10080" started-at="2018-01-23T14:22:56Z" depends-on-methods="com.powerhouse.loginLogOutTest.LoginAndLogOut.logInWithFaceBook" finished-at="2018-01-23T14:23:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInWithGoogle -->
+        <test-method status="PASS" signature="exeCutingAfterMethod(org.testng.ITestResult)[pri:0, instance:com.powerhouse.loginLogOutTest.LoginAndLogOut@66a3ffec]" name="exeCutingAfterMethod" is-config="true" duration-ms="4374" started-at="2018-01-23T14:23:07Z" finished-at="2018-01-23T14:23:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logInWithGoogle status=SUCCESS method=LoginAndLogOut.logInWithGoogle()[pri:0, instance:com.powerhouse.loginLogOutTest.LoginAndLogOut@66a3ffec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exeCutingAfterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.powerhouse.loginLogOutTest.LoginAndLogOut@66a3ffec]" name="tearDown" is-config="true" duration-ms="1046" started-at="2018-01-23T14:23:11Z" finished-at="2018-01-23T14:23:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.powerhouse.loginLogOutTest.LoginAndLogOut -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

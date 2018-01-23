@@ -16,7 +16,7 @@ public class ExtentFactory {
 	public static ExtentReports generateReport(){
 		File f=new File("Reports");
 		File fs=new File(f,"");
-		return report=new ExtentReports(fs.getAbsolutePath()+"\\powerhouse.html",false);
+		return report=new ExtentReports(fs.getAbsolutePath()+"//powerhouse.html",false);
 	}
 
 }

@@ -3,6 +3,8 @@ package com.powerhouse.commonClass;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 
+import com.thoughtworks.selenium.Wait;
+
 public class HandelAlert {
 
 	/**
@@ -28,5 +30,18 @@ public class HandelAlert {
 		Alert alt=driver.switchTo().alert();
 		String text=alt.getText();
 		return text;
+	}
+	
+	public static void handelUnexpectedAlert(WebDriver driver) throws InterruptedException{
+		int count=0;
+		while(count <=5){
+			
+			try{
+				acceptAlert(driver);
+			}catch(Throwable t){
+				count++;
+				Thread.sleep(10);
+			}
+		}
 	}
 }

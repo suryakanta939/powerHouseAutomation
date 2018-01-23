@@ -14,6 +14,7 @@ public class Checking {
 	
   @Test
   public void f() throws IOException {
+	  
 	  String browser=Property.readPropertyData("browser");
 	   String url=Property.readPropertyData("URL");
 	  driver=InvokeBrowser.opwnBrowser(browser);

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="com.powerhouse.testCase.Checking"/>
+      <class name="com.powerhouse.loginLogOutTest.LoginAndLogOut"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+</suite> 

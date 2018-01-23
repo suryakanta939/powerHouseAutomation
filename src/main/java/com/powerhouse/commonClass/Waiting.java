@@ -36,6 +36,16 @@ public class Waiting {
 		WebDriverWait wait=new WebDriverWait(driver,timeInsec);
 		wait.until(ExpectedConditions.elementToBeSelected(element));
 	}
+	
+	/**
+	 * This function is to wait for the alert
+	 * 
+	 * */
+	public static void waitForAlert(WebDriver driver,int timeInsec){
+		WebDriverWait wait=new WebDriverWait(driver,timeInsec);
+		wait.until(ExpectedConditions.alertIsPresent());
+	}
+	
 	/**
 	 * this function will wait for specific time
 	 * */
