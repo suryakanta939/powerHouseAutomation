@@ -49,9 +49,10 @@ public class powersiteSubScription {
 	    PageFactory.initElements(driver,this);
 	}
 	
-	public  void suscribeStartUpPlan() throws IOException{
+	public  void suscribeStartUpPlan() throws IOException, InterruptedException{
 		Waiting.waitForTheVisibilty(driver, powerhouseService, 10);
-	    ActionFunctions.mouseHoverOnElement(driver, powerhouseService);
+	   // ActionFunctions.mouseHoverOnElement(driver, powerhouseService);
+	    ActionFunctions.moveToCordinateandpermmouseHover(driver, powerhouseService);
 	    test.log(LogStatus.INFO, "sucessfully mouse hover on powerhouseService");
 	    Waiting.waitForTheVisibilty(driver, powersite, 10);
 	    powersite.click();

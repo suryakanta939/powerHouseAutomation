@@ -10,8 +10,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.powerhouse.baseClass.InvokeBrowser;
+import com.powerhouse.baseClass.InvokeBrowserStack;
 import com.powerhouse.commonClass.Waiting;
 import com.powerhouse.pageClass.LogInThroughGoolge;
+import com.powerhouse.pageClass.LogInWithUserNameAndPassWord;
 import com.powerhouse.pageClass.PowerSite;
 import com.powerhouse.pageClass.payment.Cart;
 import com.powerhouse.pageClass.payment.CheckOut;
@@ -28,7 +30,7 @@ public class PowerSiteSubscription {
 	ExtentTest test;
 	ExtentReports report;
 	PowerSite power_site;
-	LogInThroughGoolge login_through_google;
+	LogInWithUserNameAndPassWord login_with_user_pass;
 	String url;
 	powersiteSubScription powersite_subscription;
 	Cart cart;
@@ -39,12 +41,13 @@ public class PowerSiteSubscription {
 		report=ExtentFactory.generateReport();
 		test=report.startTest("purchasing subscription");
 		String browserName=Property.readPropertyData("check", "browser");
-		driver=InvokeBrowser.openBrowser(browserName);
+	driver=InvokeBrowser.openBrowser(browserName);
+	//	driver=InvokeBrowserStack.runInBrowserStack();
 		url=Property.readPropertyData("check", "URL");
 		driver.get(url);
 		driver.manage().window().maximize();
 		test.log(LogStatus.INFO, "browser opened");
-		login_through_google=new LogInThroughGoolge(driver, test);
+		login_with_user_pass=new LogInWithUserNameAndPassWord(driver, test);
 		power_site=new PowerSite(driver, test);
 		powersite_subscription=new powersiteSubScription(driver, test);
 		cart=new Cart(driver, test);
@@ -53,12 +56,15 @@ public class PowerSiteSubscription {
 
 	@Test
 	public void purchageStartupPlan() throws IOException, InterruptedException {
-       login_through_google.logIn();
+		String userName=Property.readPropertyData("mailandlytics", "username");
+		String passWord=Property.readPropertyData("mailandlytics", "password");
+		login_with_user_pass.logIn(userName, passWord);
        Thread.sleep(3000);
 		powersite_subscription.suscribeStartUpPlan();
 		Waiting.implictyWait(driver, 10);
 		cart.clickOnProceedToCheckOut();
-		checkout.checkingOutProduct();
+		//checkout.checkingOutProduct();
+		checkout.checkingOutProductNewZland();
 		
 	}
 	@AfterMethod

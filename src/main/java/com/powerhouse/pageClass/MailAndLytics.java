@@ -1,9 +1,12 @@
 package com.powerhouse.pageClass;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import com.powerhouse.commonClass.ActionFunctions;
 import com.powerhouse.commonClass.Waiting;
@@ -16,7 +19,8 @@ public class MailAndLytics {
 	ExtentTest test;
 	boolean displaylogo;
 	int time=0;
-	@FindBy(xpath="//ul[@id='main-menu']//li[1]/a[text()='Dashboard']")
+//	@FindBy(xpath="//ul[@id='main-menu']//li[1]/a[text()='Dashboard']")
+	@FindBy(xpath=".//*[@id='menu-item-13639']/a")
 	WebElement dashboard;
 	
 	@FindBy(xpath="//a[text()='Admin Dashboard']")
@@ -35,7 +39,10 @@ public class MailAndLytics {
 	WebElement backtodashboardPowerLytic;
 	
 	@FindBy(xpath="//*[@id='login_container']/div/div/img")
-	WebElement powermailLogo;
+	List<WebElement > powermailLogo;
+	
+	@FindBy(xpath="//a[text()='Create New Campaign']")
+	List<WebElement > createNewCampaign;
 	
 	public static WebElement signInDashBoardLytics(){
 		WebElement element=driver.findElement(By.xpath("//h1[text()='Sign in to your dashboards']"));
@@ -50,7 +57,7 @@ public class MailAndLytics {
 	}
 
 	public void landinOnAdminDashBoard() throws InterruptedException{
-		Waiting.waitForTheVisibilty(driver, dashboard, 10);
+		Waiting.waitForTheVisibilty(driver, dashboard, 15);
 		ActionFunctions.moveToCordinateandpermmouseHover(driver, dashboard);
 		test.log(LogStatus.INFO, "mouse hover on dashboard");
 		adminDashboard.click();
@@ -74,7 +81,7 @@ public class MailAndLytics {
 	 * weather the mail logo is displaying or not
 	 * */
 	public boolean isMailLogoDisplaying(){
-		if(powermailLogo.isEnabled()==true){
+		if(powermailLogo.size()!=0){
 			displaylogo=true;
 		}else{
 			displaylogo=false;
@@ -97,7 +104,7 @@ public class MailAndLytics {
 		test.log(LogStatus.INFO, "clicked on powermail");
 		while(time<11){
 			try{
-				System.out.println("mail log displaying: "+isMailLogoDisplaying());
+				if(createNewCampaign.size()!=0)
 				break;
 			}catch(Throwable t){
 				Thread.sleep(3000);

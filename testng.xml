@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="classes" thread-count="3">
-  <test name="Test">
+<suite name="Suite" parallel="tests" thread-count="3">
+  <!--
+  <test name="TestlogInLogOut">
     <classes>
       <class name="com.powerhouse.loginLogOutTest.LoginAndLogOut"/>
-      <class name="com.powerhouse.powersite.PowerSiteOption"/>
-      <class name="com.powerhouse.powersite.PowerSiteCreation"/>
     </classes>
-  </test> 
+  </test>
+  --> 
+  <test name="TestSubscription">
+    <classes>
+      <class name="com.powerhouse.powersite.PowerSiteSubscription"/>
+    </classes>
+  </test>
+  <test name="TestAutologin">
+    <classes>
+      <class name="com.powerhouse.powerMailAndLytics.AutoLogin"/>
+    </classes>
+  </test>
 </suite> 

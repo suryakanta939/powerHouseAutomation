@@ -54,8 +54,12 @@ public class LogInThroughGoolge {
 	 public void logIn() throws IOException, InterruptedException{
 		 loginButton.click();
 		 test.log(LogStatus.INFO, "clciked  on the google login button");
-		 
-		 HandelAlert.handelUnexpectedAlert(driver);
+//		 try{
+//			 HandelAlert.handelUnexpectedAlert(driver);
+//		 }catch(Throwable t){
+//			 
+//		 }
+//		 
 		 test.log(LogStatus.INFO, "handeling unexpected alert");
 		 Waiting.waitForTheVisibilty(driver, email, 10);
 		 

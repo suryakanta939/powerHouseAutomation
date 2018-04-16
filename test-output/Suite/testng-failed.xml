@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Failed suite [Suite]" parallel="classes">
-  <test name="Test(failed)" parallel="classes">
+<suite thread-count="3" name="Failed suite [Suite]" parallel="tests">
+  <test name="TestSubscription(failed)" parallel="tests">
     <classes>
-      <class name="com.powerhouse.loginLogOutTest.LoginAndLogOut">
+      <class name="com.powerhouse.powersite.PowerSiteSubscription">
         <methods>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="exeCutingAfterMethod"/>
-        </methods>
-      </class> <!-- com.powerhouse.loginLogOutTest.LoginAndLogOut -->
-      <class name="com.powerhouse.powersite.PowerSiteCreation">
-        <methods>
-          <include name="ByDomain"/>
-          <include name="afterClass"/>
-          <include name="checkSiteCreatedOrNot"/>
-          <include name="beforeClass"/>
-          <include name="deleteSite"/>
-          <include name="aftermethod"/>
-        </methods>
-      </class> <!-- com.powerhouse.powersite.PowerSiteCreation -->
-      <class name="com.powerhouse.powersite.PowerSiteOption">
-        <methods>
+          <include name="purchageStartupPlan"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
           <include name="aftermethod"/>
         </methods>
-      </class> <!-- com.powerhouse.powersite.PowerSiteOption -->
+      </class> <!-- com.powerhouse.powersite.PowerSiteSubscription -->
+      <class name="com.powerhouse.powerMailAndLytics.AutoLogin">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="aftermethod"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.powerhouse.powerMailAndLytics.AutoLogin -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- TestSubscription(failed) -->
 </suite> <!-- Failed suite [Suite] -->

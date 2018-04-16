@@ -33,7 +33,6 @@ public class HandelAlert {
 	public static void handelUnexpectedAlert(WebDriver driver) throws InterruptedException{
 		int count=0;
 		while(count <=5){
-			
 			try{
 				acceptAlert(driver);
 			}catch(Throwable t){

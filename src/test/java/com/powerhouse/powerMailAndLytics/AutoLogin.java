@@ -1,10 +1,13 @@
 package com.powerhouse.powerMailAndLytics;
-
+import java.net.URL;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -12,6 +15,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import com.powerhouse.baseClass.InvokeBrowser;
+import com.powerhouse.baseClass.InvokeBrowserStack;
 import com.powerhouse.pageClass.LogInWithUserNameAndPassWord;
 import com.powerhouse.pageClass.MailAndLytics;
 import com.powerhouse.pageClass.PowerSite;
@@ -32,12 +36,14 @@ public class AutoLogin {
 	MailAndLytics  mailandlytics;
 	String url;
 	int time=0;
+
 	@BeforeClass
 	public void beforeClass() throws IOException {
 		report=ExtentFactory.generateReport();
 		test=report.startTest("checkingAutoLogin");
 		String browserName=Property.readPropertyData("check", "browser");
-		driver=InvokeBrowser.openBrowser(browserName);
+ 	 driver=InvokeBrowserStack.runInBrowserStack();
+//		driver=InvokeBrowser.openBrowser(browserName);
 		url=Property.readPropertyData("check", "URL");
 		driver.get(url);
 		driver.manage().window().maximize();

@@ -18,6 +18,7 @@ import com.relevantcodes.extentreports.LogStatus;
  * and billing adress
  * */
 public class CheckOut {
+	int time=0;
 
 	WebDriver driver;
 	ExtentTest test;
@@ -148,6 +149,16 @@ public class CheckOut {
 		emaiId.sendKeys(email);
 	}
 
+	private void selectCountryNewZland() throws IOException{
+		String countryName=Property.readPropertyData("billingDetails", "countryNz");
+		SelectFunctions.selectByText(country, countryName);
+	}
+	
+	private void selectRegion() throws IOException{
+		String stateName=Property.readPropertyData("billingDetails", "region");
+		SelectFunctions.selectByText(state, stateName);
+	}
+	
 	/**
 	 * this the billing details function
 	 * @throws IOException 
@@ -175,6 +186,28 @@ public class CheckOut {
 		test.log(LogStatus.INFO, "feeling up the email");
 	}
 	
+	public void billingDeatilsForNewZland() throws IOException{
+		fillingUpFirstName();
+		test.log(LogStatus.INFO, "filled up the first name");
+		fillingUplastName();
+		test.log(LogStatus.INFO, "filled up the last name");
+		enteringComapnyName();
+		test.log(LogStatus.INFO, "entered the company name");
+		selectCountryNewZland();
+		test.log(LogStatus.INFO, "selected the country");
+		addingAdress();
+		test.log(LogStatus.INFO, "entered the adress");
+		enteredCityName();
+		test.log(LogStatus.INFO, "entered the city name");
+		selectRegion();
+		test.log(LogStatus.INFO, "selecting the state");
+		fillingUppostCode();
+		test.log(LogStatus.INFO, "fillingup thepost code");
+		fillingUphone();
+		test.log(LogStatus.INFO, "entered the phone no");
+		fillingUpEmail();
+		test.log(LogStatus.INFO, "feeling up the email");
+	}
 	
 	
 /**
@@ -204,10 +237,11 @@ public class CheckOut {
 	
 /**
  * this function will check the order status
+ * @throws InterruptedException 
  * */
 	
-	private void orderStatus(){
-		while(true){
+	private void orderStatus() throws InterruptedException{
+		while(time<=10){
 			try{
 				Waiting.waitForTheVisibilty(driver, chekingoutPage, 10);
 				if(chekingoutPage.isDisplayed()){
@@ -220,18 +254,29 @@ public class CheckOut {
 				}
 			}catch(Throwable t){
 				System.out.println("waiting for the order status page");
+				Thread.sleep(3000);
+				time++;
+			}
+			finally{
+				System.out.println("its taking too much time to load the page");
 			}
 			
 		}
 	}
 	
 	
-	public void checkingOutProduct() throws IOException{
+	public void checkingOutProduct() throws IOException, InterruptedException{
 		yourBillingDetails();
 		selectingPaymentOption_cod();
 		submit.click();
 		test.log(LogStatus.INFO, "clicked on submit button");
 		orderStatus();
 	}
-
+	public void checkingOutProductNewZland() throws IOException, InterruptedException{
+		billingDeatilsForNewZland();
+		selectingPaymentOption_cod();
+		submit.click();
+		test.log(LogStatus.INFO, "clicked on submit button");
+		orderStatus();
+	}
 }

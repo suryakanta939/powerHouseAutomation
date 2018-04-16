@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.powerhouse.powerMailAndLytics.AutoLogin">
+      <class name="com.powerhouse.powersite.PowerSiteSubscription">
         <methods>
-          <include name="powerMail"/>
+          <include name="purchageStartupPlan"/>
           <include name="beforeClass"/>
-          <include name="aftermethod"/>
           <include name="afterClass"/>
+          <include name="aftermethod"/>
         </methods>
-      </class> <!-- com.powerhouse.powerMailAndLytics.AutoLogin -->
+      </class> <!-- com.powerhouse.powersite.PowerSiteSubscription -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

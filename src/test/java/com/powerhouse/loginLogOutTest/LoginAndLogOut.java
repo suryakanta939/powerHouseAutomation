@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.powerhouse.baseClass.InvokeBrowser;
+import com.powerhouse.baseClass.InvokeBrowserStack;
 import com.powerhouse.commonClass.HandelAlert;
 import com.powerhouse.commonClass.Waiting;
 import com.powerhouse.pageClass.LogInThroughFaceBook;
@@ -38,7 +39,7 @@ public class LoginAndLogOut {
 		test=report.startTest("checking the loginTest");
 		  browser=Property.readPropertyData("check","browser");
 		    url=Property.readPropertyData("check","URL");
-		    driver=InvokeBrowser.openBrowser(browser);
+		    driver=InvokeBrowserStack.runInBrowserStack();
 		    test.log(LogStatus.INFO, "browser"+browser+" is invoked");
 		    
 		    // initializing the functions
