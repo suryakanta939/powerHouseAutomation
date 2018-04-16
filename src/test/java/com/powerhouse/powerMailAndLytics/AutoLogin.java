@@ -42,8 +42,8 @@ public class AutoLogin {
 		report=ExtentFactory.generateReport();
 		test=report.startTest("checkingAutoLogin");
 		String browserName=Property.readPropertyData("check", "browser");
- 	 driver=InvokeBrowserStack.runInBrowserStack();
-//		driver=InvokeBrowser.openBrowser(browserName);
+// 	 driver=InvokeBrowserStack.runInBrowserStack();
+		driver=InvokeBrowser.openBrowser(browserName);
 		url=Property.readPropertyData("check", "URL");
 		driver.get(url);
 		driver.manage().window().maximize();

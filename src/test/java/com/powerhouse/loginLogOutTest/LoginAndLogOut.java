@@ -28,7 +28,7 @@ public class LoginAndLogOut {
 	WebDriver driver;
 	ExtentReports report;
 	ExtentTest test;
-	 String browser;
+	 String browserName;
 	   String url;
 	   LogInThroughFaceBook lf;
 	   LogInThroughGoolge lg;
@@ -37,10 +37,11 @@ public class LoginAndLogOut {
 	public void setUp() throws IOException{
 		report=ExtentFactory.generateReport();
 		test=report.startTest("checking the loginTest");
-		  browser=Property.readPropertyData("check","browser");
+		browserName=Property.readPropertyData("check","browser");
 		    url=Property.readPropertyData("check","URL");
-		    driver=InvokeBrowserStack.runInBrowserStack();
-		    test.log(LogStatus.INFO, "browser"+browser+" is invoked");
+//		    driver=InvokeBrowserStack.runInBrowserStack();
+		    driver=InvokeBrowser.openBrowser(browserName);
+		    test.log(LogStatus.INFO, "browser"+browserName+" is invoked");
 		    
 		    // initializing the functions
 		    
