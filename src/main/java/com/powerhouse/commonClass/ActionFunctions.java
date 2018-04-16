@@ -29,6 +29,21 @@ public class ActionFunctions {
 	}
 	
 	/**
+	 * this function is to move to the co-ordinate 
+	 * and will perform the mouse hover operation
+	 * @throws InterruptedException 
+	 * */
+	
+	public static void moveToCordinateandpermmouseHover(WebDriver driver,WebElement element) throws InterruptedException{
+		Actions act=new Actions(driver);
+		int xCord=element.getLocation().getX();
+		int yCord=element.getLocation().getY();
+		act.moveToElement(element, xCord, yCord).build().perform();
+		Thread.sleep(1000);
+		act.moveToElement(element).build().perform();
+	}
+	
+	/**
 	 * 
 	 * Use this function for the drag and drop
 	 * */
@@ -53,7 +68,7 @@ public class ActionFunctions {
       
       public static void moveToTab(WebDriver driver){
     	  Actions act=new Actions(driver);
-         act.sendKeys(Keys.chord(Keys.SHIFT,Keys.TAB)).build().perform();
+         act.sendKeys(Keys.chord(Keys.CONTROL,Keys.TAB)).build().perform();
    
       }
       
@@ -62,6 +77,6 @@ public class ActionFunctions {
        * */
       public static void openEmeptyTab(WebDriver driver){
     	  Actions act=new Actions(driver);
-    	  act.sendKeys(Keys.chord(Keys.CONTROL,"t")).build().perform();
+    	  act.sendKeys(Keys.chord(Keys.CONTROL,"/t")).build().perform();
       }
 }

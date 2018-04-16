@@ -18,6 +18,8 @@ public class LogInThroughGoolge {
 	/**
 	 * Initializing and storing the web elements
 	 * */
+	
+	
 	static WebDriver driver;
 	static ExtentTest test;
 	static WebElement element;
@@ -58,7 +60,7 @@ public class LogInThroughGoolge {
 		 Waiting.waitForTheVisibilty(driver, email, 10);
 		 
 		 //getting the user name
-		 String userName=Property.readPropertyData("googleUserName");
+		 String userName=Property.readPropertyData("check","googleUserName");
 		 
 		 email.sendKeys(userName);
 		 test.log(LogStatus.INFO, "entered the user name");
@@ -67,7 +69,7 @@ public class LogInThroughGoolge {
 		 Waiting.waitForTheVisibilty(driver, password, 10);
 		 
 		 //getting the password
-		 String passWord=Property.readPropertyData("googlePassWord");
+		 String passWord=Property.readPropertyData("check","googlePassWord");
 		 password.sendKeys(passWord);
 		 test.log(LogStatus.INFO, "entered the passWord");
 		 next.click();

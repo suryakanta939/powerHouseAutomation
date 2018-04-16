@@ -3,8 +3,6 @@ package com.powerhouse.commonClass;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 
-import com.thoughtworks.selenium.Wait;
-
 public class HandelAlert {
 
 	/**

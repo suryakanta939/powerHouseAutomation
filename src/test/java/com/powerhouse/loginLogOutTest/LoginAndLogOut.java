@@ -1,8 +1,6 @@
 package com.powerhouse.loginLogOutTest;
 
 import java.io.IOException;
-
-import org.eclipse.jetty.websocket.api.extensions.ExtensionFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -36,12 +34,11 @@ public class LoginAndLogOut {
 	   LogOut lo;
 	@BeforeClass
 	public void setUp() throws IOException{
-		
 		report=ExtentFactory.generateReport();
 		test=report.startTest("checking the loginTest");
-		  browser=Property.readPropertyData("browser");
-		    url=Property.readPropertyData("URL");
-		    driver=InvokeBrowser.opwnBrowser(browser);
+		  browser=Property.readPropertyData("check","browser");
+		    url=Property.readPropertyData("check","URL");
+		    driver=InvokeBrowser.openBrowser(browser);
 		    test.log(LogStatus.INFO, "browser"+browser+" is invoked");
 		    
 		    // initializing the functions

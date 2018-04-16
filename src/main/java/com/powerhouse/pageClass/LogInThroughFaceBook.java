@@ -48,12 +48,12 @@ public class LogInThroughFaceBook {
 		
 		//getting facebook userName
 		
-		String userName=Property.readPropertyData("faceBookUserName");
+		String userName=Property.readPropertyData("check","faceBookUserName");
 		faceBookEmail.sendKeys(userName);
 		test.log(LogStatus.INFO, "entered the userName");
 		//getting the faceBook PAssword
 		
-		String passWord=Property.readPropertyData("faceBookPassWord");
+		String passWord=Property.readPropertyData("check","faceBookPassWord");
 		faceBookPassWord.sendKeys(passWord);
 		test.log(LogStatus.INFO, "entered the password");
 		logInButton.click();

@@ -11,9 +11,9 @@ public class Property {
 	/**
 	 * This function is to read the property file
 	 * */
-	public static String readPropertyData(String key) throws IOException{
+	public static String readPropertyData(String fileName,String key) throws IOException{
 		File f=new File("PropertyFiles");
-		File fs=new File(f,"check.properties");
+		File fs=new File(f,fileName+".properties");
 		System.out.println(fs.getAbsolutePath());
 		FileInputStream fis=new FileInputStream(fs.getAbsolutePath());
 		Properties pro=new Properties();

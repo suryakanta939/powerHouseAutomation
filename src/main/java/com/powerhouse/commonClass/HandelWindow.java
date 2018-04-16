@@ -26,9 +26,8 @@ public class HandelWindow {
 	}
 	/**
 	 * This function is to handle the window by its no
-	 * 
-	 * here  window no i.e first click as first window second click
-	 * will be the second window
+	 * here the parent window will be the 1st window and then
+	 * first click as second window and so on
 	 * 
 	 * */
 	
