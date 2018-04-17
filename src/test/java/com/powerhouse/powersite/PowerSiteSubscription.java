@@ -41,8 +41,8 @@ public class PowerSiteSubscription {
 		report=ExtentFactory.generateReport();
 		test=report.startTest("purchasing subscription");
 		String browserName=Property.readPropertyData("check", "browser");
-	driver=InvokeBrowser.openBrowser(browserName);
-	//	driver=InvokeBrowserStack.runInBrowserStack();
+//	driver=InvokeBrowser.openBrowser(browserName);
+		driver=InvokeBrowserStack.runInBrowserStack();
 		url=Property.readPropertyData("check", "URL");
 		driver.get(url);
 		driver.manage().window().maximize();
