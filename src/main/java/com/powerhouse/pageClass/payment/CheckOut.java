@@ -241,7 +241,7 @@ public class CheckOut {
  * */
 	
 	private void orderStatus() throws InterruptedException{
-		while(true){
+		while(time<=20){
 			try{
 				Waiting.waitForTheVisibilty(driver, chekingoutPage, 10);
 				if(chekingoutPage.isDisplayed()){
@@ -254,7 +254,7 @@ public class CheckOut {
 				}
 			}catch(Throwable t){
 				System.out.println("waiting for the order status page");
-//				Thread.sleep(3000);
+ 			   Thread.sleep(3000);
 				time++;
 			}
 			finally{
