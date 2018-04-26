@@ -24,7 +24,6 @@ import com.powerhouse.screenshotClass.ScreenShot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 public class PowerSiteSubscription {
 	WebDriver driver;
 	ExtentTest test;
@@ -41,8 +40,8 @@ public class PowerSiteSubscription {
 		report=ExtentFactory.generateReport();
 		test=report.startTest("purchasing subscription");
 		String browserName=Property.readPropertyData("check", "browser");
-//	driver=InvokeBrowser.openBrowser(browserName);
-		driver=InvokeBrowserStack.runInBrowserStack();
+			driver=InvokeBrowserStack.runInBrowserStack();
+	//	driver=InvokeBrowser.openBrowser(browserName);
 		url=Property.readPropertyData("check", "URL");
 		driver.get(url);
 		driver.manage().window().maximize();
@@ -59,13 +58,13 @@ public class PowerSiteSubscription {
 		String userName=Property.readPropertyData("mailandlytics", "username");
 		String passWord=Property.readPropertyData("mailandlytics", "password");
 		login_with_user_pass.logIn(userName, passWord);
-       Thread.sleep(3000);
+		Thread.sleep(3000);
 		powersite_subscription.suscribeStartUpPlan();
 		Waiting.implictyWait(driver, 10);
 		cart.clickOnProceedToCheckOut();
 		//checkout.checkingOutProduct();
 		checkout.checkingOutProductNewZland();
-		
+
 	}
 	@AfterMethod
 	public void aftermethod(ITestResult result) throws IOException{

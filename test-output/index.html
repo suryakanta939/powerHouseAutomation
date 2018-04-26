@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\User\AppData\Local\Temp\testng-eclipse-304270317\testng-customsuite.xml</span>
+                    <span>C:\Users\User\AppData\Local\Temp\testng-eclipse--1889325512\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +101,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.powerhouse.powersite.PowerSiteSubscription" hash-for-method="purchageStartupPlan">purchageStartupPlan</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.powerhouse.powerMailAndLytics.AutoLogin" hash-for-method="powerLytic">powerLytic</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.powerhouse.powerMailAndLytics.AutoLogin" hash-for-method="powerMail">powerMail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -119,14 +124,21 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.powerhouse.powersite.PowerSiteSubscription</span>
+              <span class="class-name">com.powerhouse.powerMailAndLytics.AutoLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="purchageStartupPlan">
-                  </a> <!-- purchageStartupPlan -->
-                  <span class="method-name">purchageStartupPlan</span>
+                  <a name="powerLytic">
+                  </a> <!-- powerLytic -->
+                  <span class="method-name">powerLytic</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="powerMail">
+                  </a> <!-- powerMail -->
+                  <span class="method-name">powerMail</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +146,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\User\AppData\Local\Temp\testng-eclipse-304270317\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\User\AppData\Local\Temp\testng-eclipse--1889325512\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,7 +155,7 @@
 &lt;suite name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.powerhouse.powersite.PowerSiteSubscription&quot;/&gt;
+      &lt;class name=&quot;com.powerhouse.powerMailAndLytics.AutoLogin&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -183,16 +195,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'purchageStartupPlan')
-data.setCell(0, 2, 'com.powerhouse.powersite.PowerSiteSubscription')
-data.setCell(0, 3, 67181);
+data.setCell(0, 1, 'powerLytic')
+data.setCell(0, 2, 'com.powerhouse.powerMailAndLytics.AutoLogin')
+data.setCell(0, 3, 29448);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'powerMail')
+data.setCell(1, 2, 'com.powerhouse.powerMailAndLytics.AutoLogin')
+data.setCell(1, 3, 16819);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -218,22 +234,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.powerhouse.powersite.PowerSiteSubscription</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.powerhouse.powerMailAndLytics.AutoLogin</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">purchageStartupPlan</span>
-                <span class="method-start">16029 ms</span>
+                <span class="method-name">powerLytic</span>
+                <span class="method-start">15812 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">aftermethod([TestResult name=purchageStartupPlan status=SUCCESS method=PowerSiteSubscription.purchageStartupPlan...)</span>
-                <span class="method-start">83212 ms</span>
+                <span class="method-name">aftermethod([TestResult name=powerLytic status=SUCCESS method=AutoLogin.powerLytic()[pri:0, instance:com.powerho...)</span>
+                <span class="method-start">45263 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">powerMail</span>
+                <span class="method-start">45264 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">aftermethod([TestResult name=powerMail status=SUCCESS method=AutoLogin.powerMail()[pri:0, instance:com.powerhous...)</span>
+                <span class="method-start">62084 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">83213 ms</span>
+                <span class="method-start">62084 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

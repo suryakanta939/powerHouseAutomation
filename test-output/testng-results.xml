@@ -1,36 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="84832" started-at="2018-04-16T10:01:49Z" finished-at="2018-04-16T10:03:14Z">
+  <suite name="Default suite" duration-ms="63045" started-at="2018-04-26T05:22:38Z" finished-at="2018-04-26T05:23:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="84832" started-at="2018-04-16T10:01:49Z" finished-at="2018-04-16T10:03:14Z">
-      <class name="com.powerhouse.powersite.PowerSiteSubscription">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.powerhouse.powersite.PowerSiteSubscription@47c62251]" name="beforeClass" is-config="true" duration-ms="16027" started-at="2018-04-16T15:31:49Z" finished-at="2018-04-16T15:32:05Z">
+    <test name="Default test" duration-ms="63045" started-at="2018-04-26T05:22:38Z" finished-at="2018-04-26T05:23:41Z">
+      <class name="com.powerhouse.powerMailAndLytics.AutoLogin">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.powerhouse.powerMailAndLytics.AutoLogin@47c62251]" name="beforeClass" is-config="true" duration-ms="15810" started-at="2018-04-26T10:52:38Z" finished-at="2018-04-26T10:52:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="purchageStartupPlan()[pri:0, instance:com.powerhouse.powersite.PowerSiteSubscription@47c62251]" name="purchageStartupPlan" duration-ms="67181" started-at="2018-04-16T15:32:05Z" finished-at="2018-04-16T15:33:13Z">
+        <test-method status="PASS" signature="powerLytic()[pri:0, instance:com.powerhouse.powerMailAndLytics.AutoLogin@47c62251]" name="powerLytic" duration-ms="29448" started-at="2018-04-26T10:52:53Z" finished-at="2018-04-26T10:53:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- purchageStartupPlan -->
-        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.powerhouse.powersite.PowerSiteSubscription@47c62251]" name="aftermethod" is-config="true" duration-ms="1" started-at="2018-04-16T15:33:13Z" finished-at="2018-04-16T15:33:13Z">
+        </test-method> <!-- powerLytic -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.powerhouse.powerMailAndLytics.AutoLogin@47c62251]" name="aftermethod" is-config="true" duration-ms="0" started-at="2018-04-26T10:53:23Z" finished-at="2018-04-26T10:53:23Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=purchageStartupPlan status=SUCCESS method=PowerSiteSubscription.purchageStartupPlan()[pri:0, instance:com.powerhouse.powersite.PowerSiteSubscription@47c62251] output={null}]]]>
+                <![CDATA[[TestResult name=powerLytic status=SUCCESS method=AutoLogin.powerLytic()[pri:0, instance:com.powerhouse.powerMailAndLytics.AutoLogin@47c62251] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftermethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.powerhouse.powersite.PowerSiteSubscription@47c62251]" name="afterClass" is-config="true" duration-ms="1613" started-at="2018-04-16T15:33:13Z" finished-at="2018-04-16T15:33:14Z">
+        <test-method status="PASS" signature="powerMail()[pri:0, instance:com.powerhouse.powerMailAndLytics.AutoLogin@47c62251]" name="powerMail" duration-ms="16819" started-at="2018-04-26T10:53:23Z" finished-at="2018-04-26T10:53:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- powerMail -->
+        <test-method status="PASS" signature="aftermethod(org.testng.ITestResult)[pri:0, instance:com.powerhouse.powerMailAndLytics.AutoLogin@47c62251]" name="aftermethod" is-config="true" duration-ms="0" started-at="2018-04-26T10:53:40Z" finished-at="2018-04-26T10:53:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=powerMail status=SUCCESS method=AutoLogin.powerMail()[pri:0, instance:com.powerhouse.powerMailAndLytics.AutoLogin@47c62251] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftermethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.powerhouse.powerMailAndLytics.AutoLogin@47c62251]" name="afterClass" is-config="true" duration-ms="955" started-at="2018-04-26T10:53:40Z" finished-at="2018-04-26T10:53:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.powerhouse.powersite.PowerSiteSubscription -->
+      </class> <!-- com.powerhouse.powerMailAndLytics.AutoLogin -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

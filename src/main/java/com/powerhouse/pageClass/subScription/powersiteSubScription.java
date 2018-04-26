@@ -23,7 +23,7 @@ public class powersiteSubScription {
 	static String xpathaddtocart1="//*[@id='no-of-powersites']/ul/li[";
 	static String xpathaddtocart2="]/a[2]";	
 			
-	@FindBy(xpath="//a[text()='PowerHouse Services']")
+	@FindBy(xpath="//*[@id='menu-item-14234']/a")
 	WebElement powerhouseService;
 	
 	@FindBy(xpath="//a[text()='PowerSites']")

@@ -20,7 +20,7 @@ public class MailAndLytics {
 	boolean displaylogo;
 	int time=0;
 //	@FindBy(xpath="//ul[@id='main-menu']//li[1]/a[text()='Dashboard']")
-	@FindBy(xpath=".//*[@id='menu-item-13639']/a")
+	@FindBy(xpath="//a[text()='Dashboards']")
 	WebElement dashboard;
 	
 	@FindBy(xpath="//a[text()='Admin Dashboard']")

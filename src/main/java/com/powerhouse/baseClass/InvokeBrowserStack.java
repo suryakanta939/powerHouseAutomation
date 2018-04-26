@@ -20,11 +20,12 @@ public class InvokeBrowserStack {
 	public static WebDriver runInBrowserStack() throws IOException{
 		  String browserName=Property.readPropertyData("check", "browser");
 		 DesiredCapabilities caps = new DesiredCapabilities();
-		 caps.setCapability("browser", "Chrome");
 		 if(browserName.equals("firefox")){
+			 caps.setCapability("browser", "Firefox");
 			 String version=Property.readPropertyData("browserstack", "browserVersionFFX");
 			 caps.setCapability("browser_version", version);
 		 }else if (browserName.equals("chrome")) {
+			 caps.setCapability("browser", "Chrome");
 			 String version=Property.readPropertyData("browserstack", "browserVersionChrome");
 			 caps.setCapability("browser_version", version);
 		}

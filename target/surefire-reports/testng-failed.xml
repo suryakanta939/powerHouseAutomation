@@ -7,6 +7,7 @@
         <methods>
           <include name="beforeClass"/>
           <include name="aftermethod"/>
+          <include name="afterClass"/>
         </methods>
       </class> <!-- com.powerhouse.powerMailAndLytics.AutoLogin -->
       <class name="com.powerhouse.powersite.PowerSiteSubscription">
@@ -19,23 +20,4 @@
       </class> <!-- com.powerhouse.powersite.PowerSiteSubscription -->
     </classes>
   </test> <!-- TestSubscription(failed) -->
-  <test name="TestAutologin(failed)" parallel="tests">
-    <classes>
-      <class name="com.powerhouse.powerMailAndLytics.AutoLogin">
-        <methods>
-          <include name="powerMail"/>
-          <include name="beforeClass"/>
-          <include name="powerLytic"/>
-          <include name="aftermethod"/>
-        </methods>
-      </class> <!-- com.powerhouse.powerMailAndLytics.AutoLogin -->
-      <class name="com.powerhouse.powersite.PowerSiteSubscription">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="aftermethod"/>
-        </methods>
-      </class> <!-- com.powerhouse.powersite.PowerSiteSubscription -->
-    </classes>
-  </test> <!-- TestAutologin(failed) -->
 </suite> <!-- Failed suite [Suite] -->
