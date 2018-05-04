@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.powerhouse.commonClass.ActionFunctions;
 import com.powerhouse.commonClass.HandelWindow;
+import com.powerhouse.commonClass.Scroll;
 import com.powerhouse.commonClass.Waiting;
 import com.powerhouse.propertyClass.Property;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -23,7 +24,7 @@ public class powersiteSubScription {
 	static String xpathaddtocart1="//*[@id='no-of-powersites']/ul/li[";
 	static String xpathaddtocart2="]/a[2]";	
 			
-	@FindBy(xpath="//*[@id='menu-item-14234']/a")
+	@FindBy(xpath="//*[@id='menu-item-14380']/a")
 	WebElement powerhouseService;
 	
 	@FindBy(xpath="//a[text()='PowerSites']")
@@ -58,7 +59,9 @@ public class powersiteSubScription {
 	    powersite.click();
 	    HandelWindow.handelWindowByNo(driver, 2);
 	    test.log(LogStatus.INFO, "cliked on the powersite");
-	    	 addToCart_StartUpPlan("startup").click();
+	    Scroll.scrollToExactElement(driver, addToCart_StartUpPlan("startup"));
+	    	ActionFunctions.moveToCordinateOfElement(driver, addToCart_StartUpPlan("startup"));
+	    	addToCart_StartUpPlan("startup").click();
 	    	 test.log(LogStatus.INFO, "clicked on the add to cart");
 	    	 Waiting.waitForTheVisibilty(driver, viewCart, 10);
 	    	 viewCart.click();
