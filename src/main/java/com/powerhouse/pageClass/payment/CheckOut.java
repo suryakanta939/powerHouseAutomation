@@ -65,10 +65,10 @@ public class CheckOut {
 	@FindBy(id="place_order")
 	WebElement submit;
 	
-	@FindBy(xpath="//h1[text()='Checkout']")
-	WebElement chekingoutPage;
+	@FindBy(xpath="//h1[text()='Thank You']")
+	WebElement thankyou;
 	
-	@FindBy(xpath="//p[contains(text(),'Your order has been received')]")
+	@FindBy(xpath="//p[contains(text(),'Thanks for backing us to back you')]")
 	WebElement orderMessage;
 	
 	@FindBy(xpath="//td[@data-title='Status']")
@@ -243,13 +243,11 @@ public class CheckOut {
 	private void orderStatus() throws InterruptedException{
 		while(time<=12){
 			try{
-				Waiting.waitForTheVisibilty(driver, chekingoutPage, 10);
-				if(chekingoutPage.isDisplayed()){
+				Waiting.waitForTheVisibilty(driver, thankyou, 10);
+				if(thankyou.isDisplayed()){
 					String message=orderMessage.getText();
 					System.out.println("the message of the order is "+message);
 					test.log(LogStatus.INFO, "the message of the order is "+message);
-					String orderStatus=status.getText();
-					test.log(LogStatus.INFO, "order status is "+orderStatus);
 					break;
 				}
 			}catch(Throwable t){
