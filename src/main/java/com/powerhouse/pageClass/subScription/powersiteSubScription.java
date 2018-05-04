@@ -23,7 +23,9 @@ public class powersiteSubScription {
 	static WebElement element;
 	static String xpathaddtocart1="//*[@id='no-of-powersites']/ul/li[";
 	static String xpathaddtocart2="]/a[2]";	
-			
+	static String powersiteplan1="//*[@id='no-of-powersites']/ul/li[";
+	static String powersitepla2="]/a[1]/h2";	
+	
 	@FindBy(xpath="//*[@id='menu-item-14380']/a")
 	WebElement powerhouseService;
 	
@@ -43,6 +45,11 @@ public class powersiteSubScription {
 		return element;
 	}
 	
+	private static WebElement powersite_plan(String plan) throws IOException{
+		String value=Property.readPropertyData("subscription", plan);
+		element=driver.findElement(By.xpath(powersiteplan1+value+powersitepla2));
+		return element;
+	}
 	
 	public powersiteSubScription(WebDriver driver,ExtentTest test){
 		this.driver=driver;
@@ -57,11 +64,10 @@ public class powersiteSubScription {
 	    test.log(LogStatus.INFO, "sucessfully mouse hover on powerhouseService");
 	    Waiting.waitForTheVisibilty(driver, powersite, 10);
 	    powersite.click();
-	    HandelWindow.handelWindowByNo(driver, 2);
+//	    HandelWindow.handelWindowByNo(driver, 2);
 	    test.log(LogStatus.INFO, "cliked on the powersite");
-	    Scroll.scrollToExactElement(driver, addToCart_StartUpPlan("startup"));
-	    	ActionFunctions.moveToCordinateOfElement(driver, addToCart_StartUpPlan("startup"));
-	    	addToCart_StartUpPlan("startup").click();
+	    Scroll.scrollToExactElement(driver, powersite_plan("startup"));
+	    	 addToCart_StartUpPlan("startup").click();
 	    	 test.log(LogStatus.INFO, "clicked on the add to cart");
 	    	 Waiting.waitForTheVisibilty(driver, viewCart, 10);
 	    	 viewCart.click();
